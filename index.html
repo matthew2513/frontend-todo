@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div
+      class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5"
+      tabindex="-1"
+      role="dialog"
+      id="modalSignin"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">To-do List</h1>
+          </div>
+          <div class="modal-body p-5 pt-0">
+            <form action="/submit" method="post">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="Write a task"
+                  name="title"
+                />
+                <label for="title">Write a task</label>
+              </div>
+              <input
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+                value="Submit"
+              />
+            </form>
+            <hr class="my-4" />
+            <ul class="list-group" id="todo-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <small>&copy; 2025 My To-Do App</small>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/62d9768f8f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
